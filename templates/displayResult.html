@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Customer Communication Dashboard</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    </style>
+
+</head>
+ 
+<body>
+
+        <div class="header" style="padding-left: 30px; padding-right: 30px; text-align: center">
+            <nav>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="/">Home</a>
+                    </li>
+                    <li role="presentation"><a href="showContacts">Contacts</a>
+                    </li>
+                    <li role="presentation"><a href="showHistory">Communication History</a>
+                    </li>
+                </ul>
+            </nav>
+ 
+            <div class="jumbotron">
+                <h2>Customer Communication Dashboard</h2>
+            </div>
+
+            <table>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>
+
+                <tr>
+                    <td>{{ params.user_id }}</td>
+                    <td>{{ params.name }}</td>
+                    <td>{{ params.number }}</td>
+                </tr>
+            </div>
+            </table>
+        <br>
+
+        <div style="font-weight:bold; color:red;">
+            {% if params.msg %}
+            {{ params.msg }}
+            {% endif %}
+        </div>
+
+</body>
+</html>
