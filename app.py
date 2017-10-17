@@ -6,8 +6,8 @@ app.secret_key = 'random'
 
 class Config:
 	constants = {
-		'TWILIO_ACCOUNT_SID' : 'AC97c45b70117319ef7aee95d51f0694ea',
-		'TWILIO_AUTH_TOKEN' : '147e732fa8794aad59b31b7312e9bc72',
+		'TWILIO_ACCOUNT_SID' : <enter your twilio account SID>,
+		'TWILIO_AUTH_TOKEN' : <enter your twilio auth token here>,
 		'TWILIO_NUMBER' : '+16194734682'}
 
 @app.route("/")
